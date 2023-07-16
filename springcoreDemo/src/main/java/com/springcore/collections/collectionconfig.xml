@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+ <bean class="com.springcore.collections.Student" name="student1">
+	 <property name="id">
+		 <list>
+			 <value>101</value>
+			 <value>102</value>
+			 <value>103</value>
+			 <value>104</value>
+			 <value>105</value>
+		 </list>
+	 </property>
+	 
+	 
+	  <property name="phno">
+		 <set>
+			 <value>7004098074</value>
+			 <value>4455668888</value>
+			 <value>2569875256</value>
+			 <value>1236547895</value>
+			 <value>8794661233</value>
+		 </set>
+	 </property>
+	 
+	 <property name="nameDept">
+		 <map>
+			 <entry key="Saroj" value="ApplicationDeveloper"></entry>
+			 <entry key="Roshani" value="SoftwareDeveloper"></entry>
+			 <entry key="Sumit" value="DotNetDeveloper"></entry>
+		 </map>
+	 </property>
+	 
+	 <property name="dbConfig">
+		 <props>
+			 <prop key="dbName">Login</prop>
+			 <prop key="dbuser">Root</prop>
+			 <prop key="dbPass">Root</prop>
+			 
+		 </props>
+	 </property>
+	 
+	 
+ </bean>
+ 
+ 
+ 
+ </beans>

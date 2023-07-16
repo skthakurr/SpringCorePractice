@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <context:annotation-config />
+ 
+<!-- This is our bean-->
+
+<bean class="com.springcore.lifecycle.Product" name="product1" init-method="init" destroy-method="destroy">
+	<property name="productName" value="Laptop" />
+	<property name="productId" value="101" />
+</bean>
+
+<bean class="com.springcore.lifecycle.Payment" name="payment1">
+	<property name="tnxName" value="Shopping" />
+	<property name="tnxId" value="10111" />
+</bean>
+
+<bean class="com.springcore.lifecycle.Phone" name="phone1">
+	<property name="model" value="Realme" />
+	<property name="price" value="10000" />
+</bean>
+
+</beans>

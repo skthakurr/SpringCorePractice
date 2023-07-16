@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+<!-- This is our bean-->
+ <bean  class="com.springcore.springcoreDemo.Employee" name = "employee1">
+	 
+	 <!-- Using setter injection-->
+	<property name="empId">
+		<value>101</value>
+	</property>
+	
+	<!-- We can mention value in property tag and self close it-->
+	<property name="empName" value="Saroj" />
+		
+	<property name="empCity">
+		<value>Pune</value>
+	</property>
+	<property name="salary">
+		<value>30000</value>
+	</property>
+ </bean>
+ 
+ <!-- Using p scheema to set the property-->
+ <bean class="com.springcore.springcoreDemo.Employee" name="employee2" p:empId="102" p:empName = "Roshani" p:empCity="Pune" p:salary="30000" />
+
+</beans>

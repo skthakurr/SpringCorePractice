@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+<!-- This is our bean-->
+ <!-- Using p scheema to set the property-->
+ <bean class="com.springcore.ref.HardDrive" name="harddrive" p:hardDrive1="Hitachi" p:hardDrive2 = "IBM" />
+ 
+ 
+
+ 
+  <!-- <bean class="com.springcore.ref.Computer" name="computer">
+	  <property name="cpu" value="Intel Core"></property>
+	  <property name="hardDrive">
+		 <ref bean="harddrive" />
+	  </property>
+	  
+	  <property name="memory" value="12 GB"></property>
+  </bean>
+  
+  -->
+  
+  
+<bean class="com.springcore.ref.Computer" name="computer">
+	  <property name="cpu" value="Intel Core"></property>
+	  <property name="hardDrive" ref ="harddrive"/>  
+	  <property name="memory" value="12 GB"></property>
+  </bean>
+  
+
+  
+  
+   <!-- Using P schema-->
+   
+    <!-- <bean class="com.springcore.ref.Computer" name="computer" p:cpu="Media Tech" p:hardDrive-ref="harddrive" p:memory="8 GB"></bean> --> 
+
+</beans>
