@@ -1,9 +1,11 @@
 package com.springcore.autowire.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Emp {
 	@Autowired //byType injection
+	@Qualifier("myaddress") //used to specify the name of bean
 	private Address address;
 
 	public Emp() {

@@ -17,6 +17,11 @@
 	<property name="city" value="Pune" />
 </bean>
 
+<bean class="com.springcore.autowire.annotation.Address" name="myaddress">
+	<property name="street" value="lake view road" />
+	<property name="city" value="Bhopal" />
+</bean>
+
 
 <bean class="com.springcore.autowire.annotation.Emp" name="emp1" />
 
