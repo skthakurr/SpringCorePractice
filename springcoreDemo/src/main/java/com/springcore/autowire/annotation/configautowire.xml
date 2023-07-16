@@ -9,25 +9,16 @@
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
  
+ <context:annotation-config />
+ 
 <!-- This is our bean-->
-<bean class="com.springcore.autowire.Address" name="address">
+<bean class="com.springcore.autowire.annotation.Address" name="address1">
 	<property name="street" value="Paud Road" />
 	<property name="city" value="Pune" />
 </bean>
 
-<bean class="com.springcore.autowire.Address" name="address1">
-	<property name="street" value="city bhawan" />
-	<property name="city" value="Patna" />
-</bean>
-<!-- Constructor injectiuon-->
-<bean class="com.springcore.autowire.Emp" name="emp1" autowire="constructor" />
 
-<!-- By Name it will use setter injection-->
-<!-- 
-<bean class="com.springcore.autowire.Emp" name="emp1" autowire="byName" />
--->
-<!-- By Type injection it will inject by type -->
-<!-- 
-<bean class="com.springcore.autowire.Emp" name="emp1" autowire="byType" />
--->
+<bean class="com.springcore.autowire.annotation.Emp" name="emp1" />
+
+
 </beans>
