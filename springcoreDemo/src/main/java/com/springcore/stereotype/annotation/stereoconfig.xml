@@ -22,4 +22,10 @@
  
 <context:component-scan base-package="com.springcore.stereotype.annotation" />
 
+<bean class="com.springcore.stereotype.annotation.Truck" name="truck1" scope="prototype">
+	<property name="wheels" value="12"></property>
+	<property name="model" value="Mercedes"></property>
+	<property name="color" value="Grey"></property>
+</bean>
+
 </beans>

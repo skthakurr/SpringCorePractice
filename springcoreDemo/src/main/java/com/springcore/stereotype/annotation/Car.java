@@ -3,10 +3,12 @@ package com.springcore.stereotype.annotation;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 //@Component // by default bean name will be camelcase of class name in this case bean is car
 @Component("myCar")//now bean name is myCar
+@Scope("prototype")
 public class Car {
 	@Value("4")
 	private int wheels;
